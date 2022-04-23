@@ -9,7 +9,7 @@ describe ("Tests for userServices", () =>{
         const user = userService.create (1,"danielazavala","dany")
         expect (user.username).toBe("danielazavala")
         expect (user.name).toBe("dany")
-        expect (user.id).toBe("1")
+        expect (user.id).toBe(1)
         expect (user.bio).not.toBeUndefined()
 
     })
