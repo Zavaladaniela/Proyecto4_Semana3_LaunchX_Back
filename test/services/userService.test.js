@@ -32,3 +32,15 @@ test ("3. Update username", () =>{
     userService.updateUserUsername(user,"danielaz")
     expect (user.username).toBe("danielaz")
 })
+
+// REQ 4
+test ("4. Given a list os users give me the list of username",  () => {
+    const user1 = userService.create(1,"danielazavala","dany")
+    const user2 = userService.create(1,"danielazavala2","dany")
+    const user3 = userService.create(1,"danielazavala3","dany")
+    const usernames = userService.getAllUsernames([user1,user2,user3])
+    expect (usernames).toContain("danielazavala")
+    expect (usernames).toContain("danielazavala2")
+    expect (usernames).toContain("danielazavala3")
+
+})

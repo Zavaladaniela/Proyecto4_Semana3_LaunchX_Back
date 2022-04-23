@@ -12,6 +12,15 @@ class userService{
     static updateUserUsername (user,username){
         user.setUsername = username
     }
+
+    static getAllUsernames (users){
+        //Uso de map para recorrer los elementos de una lista y crear una nueva lista
+        /*Arrow function and explicit return
+            const modifiedArray = arr.map((element,index) => element);
+        s*/
+        const userUsernames = users.map(user => user.username)
+        return userUsernames
+    }
 }
 
 module.exports = userService
