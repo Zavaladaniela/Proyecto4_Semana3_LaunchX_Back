@@ -25,3 +25,10 @@ test ("2. Get all user data in a list", () =>{
     expect (userInfoList [2]).toBe ("dany")
     expect (userInfoList [3]).toBe ("Sin Bio")
 })
+
+//REQ 3:
+test ("3. Update username", () =>{
+    const user = userService.create(1,"danielazavala","dany")
+    userService.updateUserUsername(user,"danielaz")
+    expect (user.username).toBe("danielaz")
+})
