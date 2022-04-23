@@ -23,7 +23,7 @@ test ("2. Get all user data in a list", () =>{
     expect (userInfoList [0]).toBe (1)
     expect (userInfoList [1]).toBe ("danielazavala")
     expect (userInfoList [2]).toBe ("dany")
-    expect (userInfoList [3]).toBe ("Sin Bio")
+    expect (userInfoList [3]).toBe ("Sin bio")
 })
 
 //REQ 3:
