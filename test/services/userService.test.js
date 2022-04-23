@@ -15,4 +15,13 @@ describe ("Tests for userServices", () =>{
     })
 })
 
-// REQ 2: Agregar metodo estatico en userService llamado getInfo
+// REQ 2: Prueba de unidad
+//Agregar metodo estatico en userService llamado getInfo
+test ("2. Get all user data in a list", () =>{
+    const user = userService.create (1, "danielazavala","dany")
+    const userInfoList = userService.getInfo (user)
+    expect (userInfoList [0]).toBe (1)
+    expect (userInfoList [1]).toBe ("danielazavala")
+    expect (userInfoList [2]).toBe ("dany")
+    expect (userInfoList [3]).toBe ("Sin Bio")
+})
